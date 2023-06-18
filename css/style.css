@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  align-self: flex-start;
+}
+.logo-container .logo {
+  background-image: url("/img/logo.svg");
+  width: 295px;
+  height: 33px;
+  background-size: 35% 70%;
+  background-repeat: no-repeat;
+  margin: 1.5em 2em 1em 2em;
+}
+
+.hero-img {
+  background-image: url("/img/hero-mobile.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  color: hsl(0, 36%, 70%);
+  text-align: center;
+  margin: 3em 1.5em 0;
+  max-width: 400px;
+  order: 1;
+}
+.container__list {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: hsl(0, 6%, 24%);
+  letter-spacing: 8px;
+  font-weight: 600;
+  list-style: none;
+}
+.container__list-1 {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+.container__parag {
+  line-height: 1.5em;
+  margin: 1.5em 0;
+}
+.container__form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.container__form input {
+  border-radius: 20px;
+  border: 1px solid hsl(0, 36%, 70%);
+  height: 3em;
+  outline: none;
+  height: 40px;
+}
+.container__form input::-moz-placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.container__form input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.container__form-email {
+  padding: 1em;
+  width: 100%;
+  background: none;
+}
+.container__form-email:active {
+  border-color: hsl(0, 93%, 68%);
+}
+.container__form-submit {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  color: white;
+  padding: 0;
+  cursor: pointer;
+  font-size: 2em;
+}
+.container__error {
+  visibility: hidden;
+  margin: 1em 0 0 0.7em;
+  text-align: left;
+}
+
+@media (min-width: 1100px) {
+  body {
+    flex-wrap: wrap;
+  }
+  .logo-container {
+    order: 0;
+    width: 50%;
+    margin-left: 5em;
+  }
+  .logo-container .logo {
+    background-size: 45% 80%;
+  }
+  .hero-img {
+    background-image: url("/img/hero-desktop.jpg");
+    background-size: cover;
+    order: 2;
+    align-self: flex-end;
+    width: 50%;
+    height: 100%;
+  }
+  .container {
+    order: 1;
+    text-align: left;
+    width: 50%;
+    align-self: flex-start;
+    margin-left: 6.5em;
+  }
+  .container__list {
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: hsl(0, 6%, 24%);
+    letter-spacing: 8px;
+    font-weight: 600;
+    list-style: none;
+  }
+  .container__list-1 {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+  }
+  .container__parag {
+    line-height: 1.5em;
+    margin: 1.5em 0;
+  }
+}/*# sourceMappingURL=style.css.map */

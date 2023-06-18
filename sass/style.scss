@@ -1,0 +1,156 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.6rem;
+	background: $Linear1;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.logo-container {
+	align-self: flex-start;
+	.logo {
+		background-image: url('/img/logo.svg');
+		width: 295px;
+		height: 33px;
+		background-size: 35% 70%;
+		background-repeat: no-repeat;
+		margin: 1.5em 2em 1em 2em;
+	}
+}
+
+.hero-img {
+	background-image: url('/img/hero-mobile.jpg');
+	height: 250px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.container {
+	color: $Red;
+	text-align: center;
+	margin: 3em 1.5em 0;
+	max-width: 400px;
+	order: 1;
+
+	&__list {
+		font-size: 4.5rem;
+		text-transform: uppercase;
+		color: $DarkRed;
+		letter-spacing: 8px;
+		font-weight: 600;
+		list-style: none;
+		&-1 {
+			color: $Red;
+			font-weight: 300;
+		}
+	}
+
+	&__parag {
+		line-height: 1.5em;
+		margin: 1.5em 0;
+	}
+	&__form {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		input {
+			border-radius: 20px;
+			border: 1px solid $Red;
+			height: 3em;
+			outline: none;
+			height: 40px;
+		}
+		input::placeholder {
+			color: $Red;
+		}
+		&-email {
+			padding: 1em;
+			width: 100%;
+			background: none;
+		}
+		&-email:active {
+			border-color: $SoftRed;
+		}
+		&-submit {
+			position: absolute;
+			right: 0;
+			width: 20%;
+			background: $Linear2;
+			color: white;
+			padding: 0;
+			cursor: pointer;
+			font-size: 2em;
+		}
+	}
+	&__error {
+		visibility: hidden;
+		margin: 1em 0 0 0.7em;
+		text-align: left;
+	}
+}
+
+@media (min-width: 1100px) {
+	body {
+		flex-wrap: wrap;
+	}
+	.logo-container {
+		order: 0;
+		width: 50%;
+		margin-left: 5em;
+		.logo {
+			background-size: 45% 80%;
+		}
+		
+	}
+	.hero-img {
+		background-image: url('/img/hero-desktop.jpg');
+		background-size: cover;
+		order: 2;
+		align-self: flex-end;
+		width: 50%;
+		height: 100%
+	}
+	.container {
+		order: 1;
+		text-align: left;
+		width: 50%;
+		align-self: flex-start;
+		margin-left: 6.5em;
+		&__list {
+			font-size: 7rem;
+			text-transform: uppercase;
+			color: $DarkRed;
+			letter-spacing: 8px;
+			font-weight: 600;
+			list-style: none;
+			&-1 {
+				color: $Red;
+				font-weight: 300;
+			}
+		}
+	
+		&__parag {
+			line-height: 1.5em;
+			margin: 1.5em 0;
+		}
+	}
+
+	
+}
