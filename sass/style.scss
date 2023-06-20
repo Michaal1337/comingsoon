@@ -70,7 +70,8 @@ body {
 		display: flex;
 		justify-content: center;
 		position: relative;
-		input {
+		input,
+		button {
 			border-radius: 20px;
 			border: 1px solid $Red;
 			height: 3em;
@@ -92,16 +93,19 @@ body {
 			position: absolute;
 			right: 0;
 			width: 20%;
-			background: $Linear2;
+			background-image: $Linear2;
 			color: white;
 			padding: 0;
 			cursor: pointer;
 			font-size: 2em;
 		}
+		&-submit:active {
+			background: $SoftRed;
+		}
 	}
 	&__error {
 		// visibility: hidden;
-		margin: 1em 0 0 0.7em;
+		margin: 1em 0 1em 0.7em;
 		text-align: left;
 	}
 }
@@ -111,16 +115,15 @@ body {
 		flex-wrap: wrap;
 	}
 	.logo-container {
+		position: relative;
+		top: 2em;
+		left: 4em;
 		order: 0;
 		width: 60%;
 		height: 10%;
 		max-width: 400px;
-		position: relative;
-		top: 2em;
-		left: 4em;
-		
-		.logo {
 
+		.logo {
 			background-size: 50% 90%;
 		}
 	}
